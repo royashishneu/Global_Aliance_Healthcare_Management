@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.LabAssistantRole;
+package ui.LabAdminRole;
 
 import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
@@ -24,19 +25,18 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
     private EcoSystem business;
     private UserAccount userAccount;
     private LabOrganization labOrganization;
-    
+    private Enterprise enterprise;
+
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
-    public LabAssistantWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, EcoSystem business) {
+    public LabAssistantWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, LabOrganization organization, EcoSystem business, Enterprise enterprise) {
         initComponents();
-        
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.business = business;
-        this.labOrganization = (LabOrganization)organization;
-        
-        populateTable();
+        this.labOrganization = (LabOrganization) organization;
+        this.enterprise = enterprise;
     }
     
     public void populateTable(){
