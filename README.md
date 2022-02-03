@@ -8,3 +8,4 @@ This Java application uses DB4O object database to store data.
 Key Features:
 - Multiple networks can use the same system to provide services in their region
 - Statistical tools to visually represent different aspect 
+- Has the ability to scale globally
